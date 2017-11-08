@@ -4,13 +4,13 @@
 
 This is the Web App for tracking the cars in the Vicious Valet fleet.
 
-* Program will accept the following user inputs:
-** License Plate
-** State
-** Color
-** Make
-** Model
-** Location
+Program will accept the following user inputs:
+* License Plate
+* State
+* Color
+* Make
+* Model
+* Location
 
 Once all inputs are added, the Car is added to the Lot. Once a Lot is full it will no longer accept new cars.
 
