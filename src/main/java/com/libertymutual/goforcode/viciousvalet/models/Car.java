@@ -2,22 +2,20 @@ package com.libertymutual.goforcode.viciousvalet.models;
 
 public class Car {
 
-//	private String license;
-//	private String state;
-//	private String color;
-//	private String make;
-//	private String model;
+	// Methods: create, locate, park
 
-	public void addCar() {
-		
-	}
-
-	public void returnCar() {
-
-	}
+	private String license;
+	private String state;
+	private String color;
+	private String make;
+	private String model;
 	
-	public void locateCar() {
-
+	public Car(String license, String state, String color, String make, String model) {
+		this.license = license;
+		this.state = state;
+		this.color = color;
+		this.make = make;
+		this.model = model;
 	}
 
 }
