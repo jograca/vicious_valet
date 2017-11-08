@@ -13,7 +13,10 @@ import com.libertymutual.goforcode.viciousvalet.models.Lot;
 public class AppController {
 
 	private Lot carLot;
-
+	private int carsOnLot;
+	private int openSpots;
+	//private int capacity = carLot.getLotCapacity();
+	
 	// Constructor
 	public AppController() {
 		carLot = new Lot();
@@ -36,14 +39,19 @@ public class AppController {
 			// Add a method to the Lot class and call that method
 			
 			carLot.addCarToLot(newCar);
-			
-		} else {
-			throw new EmptyStackException();
+			carsOnLot = carLot.findCarsOnLot();
+			openSpots = carLot.getLotCapacity();
 		}
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("app");
 
+		// Add the Car lot so that I can see the list of cars in the view
+		mv.addObject("lot", carLot);
+		mv.addObject("parked", carsOnLot);
+		mv.addObject("opened", openSpots);
+		//mv.addObject("capacity", capacity);
+		
 		return mv;
 	}
 

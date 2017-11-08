@@ -37,5 +37,20 @@
 			<button>Add a Car</button>
 		</div>
 	</form>
+	<br>
+	<br>
+	Open Spots on Lot: {{ opened }}
+	<br>
+	Number of Cars on the Lot: {{ parked }}
+	<ul>
+		{{#lot.carList}}
+		<br> <b>Vehicle:</b>
+		<br>
+		<li>License: {{ license }}</li>
+		<li>State: {{ state }}</li>
+		<li>Color: {{ color }}</li>
+		<li>Make: {{ make }}</li>
+		<li>Model: {{ model }}</li> {{/lot.carList}}
+	</ul>
 </body>
 </html>
