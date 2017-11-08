@@ -7,13 +7,15 @@ public class Car {
 	private String color;
 	private String make;
 	private String model;
+	private String location;
 
-	public Car(String license, String state, String color, String make, String model) {
+	public Car(String license, String state, String color, String make, String model, String location) {
 		this.license = license;
 		this.state = state;
 		this.color = color;
 		this.make = make;
 		this.model = model;
+		this.location = location;
 	}
 
 	public String getLicense() {
@@ -34,6 +36,10 @@ public class Car {
 
 	public String getModel() {
 		return model;
+	}
+
+	public String getLocation() {
+		return location;
 	}
 
 }

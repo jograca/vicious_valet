@@ -15,7 +15,6 @@ public class AppController {
 	private int openSpots;
 	private int capacity;
 	private boolean full;
-	private String returnFull;
 	
 	// Constructor
 	public AppController() {
@@ -23,7 +22,7 @@ public class AppController {
 	}
 
 	@RequestMapping("/")
-	public ModelAndView showApp(String license, String state, String color, String make, String model) {
+	public ModelAndView showApp(String license, String state, String color, String make, String model, String location) {
 		// if license is not null and the length of license is greater than 0
 		// create a new instance of the car class from the values submitted
 		
@@ -31,9 +30,10 @@ public class AppController {
 				&& state != null && !state.isEmpty()
 				&& color != null && !color.isEmpty()
 				&& make != null && !make.isEmpty()
-				&& model != null && !model.isEmpty()){
+				&& model != null && !model.isEmpty()
+				&& location != null && !location.isEmpty()){
 			
-			Car newCar = new Car (license, state, color, make, model);
+			Car newCar = new Car (license, state, color, make, model, location);
 			
 			// park the car in the lot (how do we do this?) 
 			// Add a method to the Lot class and call that method
