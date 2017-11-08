@@ -1,7 +1,5 @@
 package com.libertymutual.goforcode.viciousvalet.controllers;
 
-import java.util.EmptyStackException;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,11 +13,13 @@ public class AppController {
 	private Lot carLot;
 	private int carsOnLot;
 	private int openSpots;
-	//private int capacity = carLot.getLotCapacity();
+	private int capacity;
+	private boolean full;
+	private String returnFull;
 	
 	// Constructor
 	public AppController() {
-		carLot = new Lot();
+		carLot = new Lot(5);
 	}
 
 	@RequestMapping("/")
@@ -40,7 +40,9 @@ public class AppController {
 			
 			carLot.addCarToLot(newCar);
 			carsOnLot = carLot.findCarsOnLot();
-			openSpots = carLot.getLotCapacity();
+			openSpots = carLot.openLotSpots();
+			capacity = carLot.getLotCapacity();
+			full = carLot.isLotFull();
 		}
 		
 		ModelAndView mv = new ModelAndView();
@@ -50,7 +52,8 @@ public class AppController {
 		mv.addObject("lot", carLot);
 		mv.addObject("parked", carsOnLot);
 		mv.addObject("opened", openSpots);
-		//mv.addObject("capacity", capacity);
+		mv.addObject("capacity", capacity);
+		mv.addObject("full", full);
 		
 		return mv;
 	}

@@ -37,14 +37,14 @@
 			<button>Add a Car</button>
 		</div>
 	</form>
-	<br>
-	<br>
-	Open Spots on Lot: {{ opened }}
-	<br>
-	Number of Cars on the Lot: {{ parked }}
+	<p>{{#full}} The lot is now full! {{/full}}</p>
+	<br> Overall Lot Capacity: {{ capacity }}
+	<br> Open Spots on Lot: {{ opened }}
+	<br> Number of Cars on the Lot: {{ parked }}
 	<ul>
 		{{#lot.carList}}
-		<br> <b>Vehicle:</b>
+		<br>
+		<b>Vehicle:</b>
 		<br>
 		<li>License: {{ license }}</li>
 		<li>State: {{ state }}</li>

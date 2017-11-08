@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Lot {
 
-	private int lotCapacity = 5;
+	private int lotCapacity;
 
 	// Methods: addCar, removeCar, isFull, totalCarsInLot
 	// Attributes: capacity
@@ -17,17 +17,15 @@ public class Lot {
 	// Has the same name as the class
 	// Does not have a return type (ex: void, etc)
 
-	public Lot() {
+	public Lot(int lotCapacity) {
+		this.lotCapacity = lotCapacity;
 		carList = new ArrayList<Car>(); // set it to an initial value
 	}
 
 	// Method to add a car to the Lot
 
 	public void addCarToLot(Car newCar) {
-		// add a car to the lot if it has capacity 
-		
-		if (lotCapacity != 0) {
-			lotCapacity = lotCapacity - 1;
+		if (!isLotFull()) {
 			carList.add(newCar);
 		}
 	}
@@ -44,6 +42,10 @@ public class Lot {
 		return lotCapacity;
 	}
 
+	public int openLotSpots() {
+		return (lotCapacity - carList.size());
+	}
+	
 	public void setLotCapacity(int lotCapacity) {
 		this.lotCapacity = lotCapacity;
 	}
@@ -52,5 +54,15 @@ public class Lot {
 
 	public ArrayList<Car> getCarList() {
 		return carList;
+	}
+	
+	// check to see if lot is full and return true or false
+	
+	public boolean isLotFull() {
+		if (carList.size() < lotCapacity) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }
