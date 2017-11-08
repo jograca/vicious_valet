@@ -1,5 +1,7 @@
 package com.libertymutual.goforcode.viciousvalet.controllers;
 
+import java.util.EmptyStackException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -29,6 +31,12 @@ public class AppController {
 				&& model != null && !model.isEmpty()){
 			
 			Car newCar = new Car (license, state, color, make, model);
+			
+			// park the car in the lot (how do we do this?) 
+			// Add a method to the Lot class and call that method
+			
+			carLot.addCarToLot(newCar);
+			
 		} else {
 			throw new EmptyStackException();
 		}
