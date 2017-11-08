@@ -42,6 +42,8 @@ public class Lot {
 		return lotCapacity;
 	}
 
+	// Method to return open spots on the lot
+	
 	public int openLotSpots() {
 		return (lotCapacity - carList.size());
 	}
