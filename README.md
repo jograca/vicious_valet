@@ -24,8 +24,8 @@ The AppController gets updated with a new variable: `private boolean full;`
 
 RequestMapping in AppController calls the isLotFull() method and assigns its response to the variable in this line: `full = carLot.isLotFull();` 
 
-* If "true" is returned - "full = true." 
-* If "false" is returned, "full = false" 
+* If "true" is returned from isLotFull() - "full = true." 
+* If "false" is returned from isLotFull() - "full = false" 
 
 ModelAndView in AppController gets updated the following addObject: `mv.addObject("full", full);` This makes the value of the variable accessible to the app.html in order to use mustache.js templates to manipulate the View.
 
