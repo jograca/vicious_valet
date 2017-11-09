@@ -41,5 +41,3 @@ This conditional (in Mustache dentoted with a #) will only display when the vari
 To reverse this conditional (display when "full" is set to "false" the following lines could be tested:
 
 `<p><b><font color="blue"> {{^full}} The has spaces {{/full}}</font></b></p>`
-
-`<p><b><font color="blue"> {{!#full}} The has spaces {{/full}}</font></b></p>`

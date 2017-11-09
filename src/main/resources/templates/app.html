@@ -9,7 +9,8 @@
 
 	<form action="/" method="post">
 		<div>
-			<label> License Plate: <input type="text" name="license" required>
+			<label> License Plate: <input type="text" name="license"
+				required>
 			</label>
 		</div>
 		<br>
@@ -47,34 +48,38 @@
 		<b><font color="red"> {{#full}} The lot is now full!
 				{{/full}}</font></b>
 	</p>
+	<p>
+		<b><font color="blue"> {{^full}} The lot has spaces
+				{{/full}}</font></b>
+	</p>
 	<br> Overall Lot Capacity: {{ capacity }}
 	<br> Open Spots on Lot: {{ opened }}
 	<br> Number of Cars on the Lot: {{ parked }}
 	<br>
 	<table border="1">
-	<thead>
-		<tr>
-			<th>License</th>
-			<th>State</th>
-			<th>Make</th>
-			<th>Model</th>
-			<th>Color</th>
-			<th>License</th>
-		</tr>
-	</thead>
-	<br>
-	<tbody>
-		{{#lot.carList}}
-		<tr>
-			<td>{{ license }}</td>
-			<td>{{ state }}</td>
-			<td>{{ make }}</td>
-			<td>{{ model }}</td>
-			<td>{{ color }}</td>
-			<td>{{ location }}</td>
-		</tr>
-		{{/lot.carList}}
-	</tbody>
-</table>
+		<thead>
+			<tr>
+				<th>License</th>
+				<th>State</th>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Color</th>
+				<th>License</th>
+			</tr>
+		</thead>
+		<br>
+		<tbody>
+			{{#lot.carList}}
+			<tr>
+				<td>{{ license }}</td>
+				<td>{{ state }}</td>
+				<td>{{ make }}</td>
+				<td>{{ model }}</td>
+				<td>{{ color }}</td>
+				<td>{{ location }}</td>
+			</tr>
+			{{/lot.carList}}
+		</tbody>
+	</table>
 </body>
 </html>
