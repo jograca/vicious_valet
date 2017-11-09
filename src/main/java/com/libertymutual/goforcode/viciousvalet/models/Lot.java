@@ -29,6 +29,12 @@ public class Lot {
 			carList.add(newCar);
 		}
 	}
+	
+	// Method to remove a car from the lost
+	
+	public void removeCarFromLot(int carIndex) {
+		carList.remove(carIndex - 1);
+	}
 
 	// Method to find number of cars on lot (size of array)
 

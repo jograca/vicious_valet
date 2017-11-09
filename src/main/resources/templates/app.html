@@ -77,6 +77,12 @@
 				<td>{{ model }}</td>
 				<td>{{ color }}</td>
 				<td>{{ location }}</td>
+				<td>
+					<form action="/remove" method="post">
+						<input type="hidden" name="carIndex" value="{{ -index }}">
+						<button>Remove From Lot</button>
+					</form>
+				</td>
 			</tr>
 			{{/lot.carList}}
 		</tbody>
