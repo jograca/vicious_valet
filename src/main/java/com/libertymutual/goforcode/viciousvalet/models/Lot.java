@@ -45,11 +45,7 @@ public class Lot {
 	// Method to return open spots on the lot
 	
 	public int openLotSpots() {
-		return (lotCapacity - carList.size());
-	}
-	
-	public void setLotCapacity(int lotCapacity) {
-		this.lotCapacity = lotCapacity;
+		return (lotCapacity - findCarsOnLot());
 	}
 
 	// Getters for Car List
@@ -61,7 +57,7 @@ public class Lot {
 	// check to see if lot is full and return true or false
 	
 	public boolean isLotFull() {
-		if (carList.size() < lotCapacity) {
+		if (findCarsOnLot() < lotCapacity) {
 			return false;
 		} else {
 			return true;
