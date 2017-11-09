@@ -14,6 +14,8 @@ Program will accept the following user inputs:
 
 Once all inputs are added, the Car is added to the Lot. Once a Lot is full it will no longer accept new cars.
 
+Additional functionality was added on Novembrer 9th to allow for a car to be removed.
+
 ### Homework Note:
 
 Task was to alert a user on screen when the lot is full. The following was done to achieve this:
