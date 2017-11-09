@@ -50,17 +50,31 @@
 	<br> Overall Lot Capacity: {{ capacity }}
 	<br> Open Spots on Lot: {{ opened }}
 	<br> Number of Cars on the Lot: {{ parked }}
-	<ul>
+	<br>
+	<table border="1">
+	<thead>
+		<tr>
+			<th>License</th>
+			<th>State</th>
+			<th>Make</th>
+			<th>Model</th>
+			<th>Color</th>
+			<th>License</th>
+		</tr>
+	</thead>
+	<br>
+	<tbody>
 		{{#lot.carList}}
-		<br>
-		<b>Vehicle:</b>
-		<br>
-		<li>License: {{ license }}</li>
-		<li>State: {{ state }}</li>
-		<li>Color: {{ color }}</li>
-		<li>Make: {{ make }}</li>
-		<li>Model: {{ model }}</li>
-		<li>Location: {{ location }}</li> {{/lot.carList}}
-	</ul>
+		<tr>
+			<td>{{ license }}</td>
+			<td>{{ state }}</td>
+			<td>{{ make }}</td>
+			<td>{{ model }}</td>
+			<td>{{ color }}</td>
+			<td>{{ location }}</td>
+		</tr>
+		{{/lot.carList}}
+	</tbody>
+</table>
 </body>
 </html>
