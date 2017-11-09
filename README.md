@@ -38,3 +38,8 @@ This conditional (in Mustache dentoted with a #) will only display when the vari
 * "full" variable is set to 'true' and thus:
 * isLotFull() returns "true"
 
+To reverse this conditional (display when "full" is set to "false" the following lines could be tested:
+
+`<p><b><font color="blue"> {{^full}} The has spaces {{/full}}</font></b></p>`
+
+`<p><b><font color="blue"> {{!#full}} The has spaces {{/full}}</font></b></p>`
