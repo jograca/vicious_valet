@@ -79,5 +79,28 @@ public class AppController {
 		
 		return mv;
 	}
+	
+	@RequestMapping("removeAll")
+	public ModelAndView removeAllCars() {
+		
+		carLot.removeALlCarsFromLot();
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("app");
+		
+		carsOnLot = carLot.findCarsOnLot();
+		openSpots = carLot.openLotSpots();
+		capacity = carLot.getLotCapacity();
+		full = carLot.isLotFull();
+		
+		mv.addObject("lot", carLot);
+		mv.addObject("parked", carsOnLot);
+		mv.addObject("opened", openSpots);
+		mv.addObject("capacity", capacity);
+		mv.addObject("full", full);
+		
+		return mv;
+		
+	}
 
 }

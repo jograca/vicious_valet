@@ -35,6 +35,13 @@ public class Lot {
 	public void removeCarFromLot(int carIndex) {
 		carList.remove(carIndex - 1);
 	}
+	
+	// Method to remove all cars from lot
+	
+	public void removeALlCarsFromLot() {
+		
+		carList.removeAll(getCarList());	
+	}
 
 	// Method to find number of cars on lot (size of array)
 

@@ -52,6 +52,10 @@
 		<b><font color="blue"> {{^full}} The lot has spaces
 				{{/full}}</font></b>
 	</p>
+	<form action="/removeAll" method="post">
+		<input type="hidden" name="carRemove" type="reset">
+		<button>Remove All Cars</button>
+	</form>
 	<br> Overall Lot Capacity: {{ capacity }}
 	<br> Open Spots on Lot: {{ opened }}
 	<br> Number of Cars on the Lot: {{ parked }}
