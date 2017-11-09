@@ -16,19 +16,25 @@ Once all inputs are added, the Car is added to the Lot. Once a Lot is full it wi
 
 ### Homework Note:
 
-Task was to alert a users on screen when the lot is full. The following was done to achieve this:
+Task was to alert a user on screen when the lot is full. The following was done to achieve this:
 
-Utilizes `isLotFull()` method in Lot.java
+Utilizes `isLotFull()` method in the Lot class.
 
-AppController.java was updated with a new variable: `private boolean full;`
+The AppController gets updated with a new variable: `private boolean full;`
 
-RequestMapping in AppController was updated with the line `full = carLot.isLotFull();` This sets the variable to "full" when the isLotFull() method in Lot.java returns "true"
+RequestMapping in AppController calls the isLotFull() method and assigns its response to the variable in this line: `full = carLot.isLotFull();` 
 
-ModelAndView in AppController was updated with the following addObject: `mv.addObject("full", full);` This makes the value of the variable accessible to the app.html using Mustache templates.
+* If "true" is returned - "full = true." 
+* If "false" is returned, "full = false" 
+
+ModelAndView in AppController gets updated the following addObject: `mv.addObject("full", full);` This makes the value of the variable accessible to the app.html in order to use mustache.js templates to manipulate the View.
 
 app.html was updated with the following list item:
 
 `<p><b><font color="red"> {{#full}} The lot is now full! {{/full}}</font></b></p>`
 
-This conditional (in Mustache dentoted with a #) will only display when the variable is populated, thus will only appear on the screen when isLotFull() is set to 'true'.
+This conditional (in Mustache dentoted with a #) will only display when the variable is populated, thus will only appear on the screen when:
+
+* "full" variable is set to 'true' and thus:
+* isLotFull() returns "true"
 
