@@ -1,0 +1,97 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+button {
+	background-color: white;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#masthead {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+}
+
+#navbar {
+	float: right;
+}
+
+#nav-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.nav-link {
+	display: inline;
+	paddnig-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+#nav-list > li > a {
+	text-decoration: none;
+	color: white;
+}
+
+#hero {
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("https://media.licdn.com/media/AAEAAQAAAAAAAAJdAAAAJGQwZjExODdmLWZiNTQtNGJiZS05NzUwLTFjYWNmYWU2MGQ0Mw.png");
+}
+
+#header-statement {
+	text-align: center;
+}
+
+#form {
+	text-align: center;
+}
+
+#content {
+	margin: auto;
+    width: 60%;
+    border: 3px solid orange;
+    padding: 10px;
+}
+
+#table {
+	text-align: center;
+	background-color: white;
+	color: black; 
+}
+
+thead, tr, th {
+	text-align: center;
+}
+
+#social-links {
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px
+}
+
+#social-links a {
+	text-decoration-line: none;
+	color: white;
+}

@@ -4,92 +4,121 @@
 <meta charset="utf-8">
 <title>Vicious Valet App</title>
 </head>
+<link rel="stylesheet" href="/css/app.css" />
 <body>
-	<h2>Vicious Valet Web App</h2>
+	<div id="masthead">
 
-	<form action="/" method="post">
-		<div>
+		<div id="navbar">
+
+			<ul id="nav-list">
+				<li class="nav-link"><a href="#">About Us</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div id="hero"></div>
+
+	<br>
+	<br>
+
+	<div id="header-statement">
+		<h2>Welcome to Vicious Valet</h2>
+		<h3>Add A Vehicle to our Lot</h3>
+	</div>
+	
+	<br>
+	<br>
+
+	<div id="form">
+
+		<form action="/" method="post" id="form">
+
 			<label> License Plate: <input type="text" name="license"
 				required>
-			</label>
-		</div>
-		<br>
-		<div>
-			<label> State: <input type="text" name="state" required>
-			</label>
-		</div>
-		<br>
-		<div>
-			<label> Color: <input type="text" name="color" required>
-			</label>
-		</div>
-		<br>
-		<div>
-			<label> Make: <input type="text" name="make" required>
-			</label>
-		</div>
-		<br>
-		<div>
-			<label> Model: <input type="text" name="model" required>
-			</label>
-		</div>
-		<br>
-		<div>
-			<label> Location: <input type="text" name="location" required>
-			</label>
-		</div>
-		<br>
-		<div>
+			</label> <br> <br> <label> State: <input type="text"
+				name="state" required>
+			</label> <br> <br> <label> Color: <input type="text"
+				name="color" required>
+			</label> <br> <br> <label> Make: <input type="text"
+				name="make" required>
+			</label> <br> <br> <label> Model: <input type="text"
+				name="model" required>
+			</label> <br> <br> <label> Location: <input type="text"
+				name="location" required>
+			</label> <br> <br>
+
 			<button>Add a Car</button>
-		</div>
-		<br>
-	</form>
-	<p>
-		<b><font color="red"> {{#full}} The lot is now full!
-				{{/full}}</font></b>
-	</p>
-	<p>
-		<b><font color="blue"> {{^full}} The lot has spaces
-				{{/full}}</font></b>
-	</p>
-	<form action="/removeAll" method="post">
-		<input type="hidden" name="carRemove" type="reset">
-		<button>Remove All Cars</button>
-	</form>
-	<br> Overall Lot Capacity: {{ capacity }}
-	<br> Open Spots on Lot: {{ opened }}
-	<br> Number of Cars on the Lot: {{ parked }}
+
+		</form>
+
+	</div>
+
 	<br>
-	<table border="1">
-		<thead>
-			<tr>
-				<th>License</th>
-				<th>State</th>
-				<th>Make</th>
-				<th>Model</th>
-				<th>Color</th>
-				<th>License</th>
-			</tr>
-		</thead>
-		<br>
-		<tbody>
-			{{#lot.carList}}
-			<tr>
-				<td>{{ license }}</td>
-				<td>{{ state }}</td>
-				<td>{{ make }}</td>
-				<td>{{ model }}</td>
-				<td>{{ color }}</td>
-				<td>{{ location }}</td>
-				<td>
-					<form action="/remove" method="post">
-						<input type="hidden" name="carIndex" value="{{ -index }}">
-						<button>Remove From Lot</button>
-					</form>
-				</td>
-			</tr>
-			{{/lot.carList}}
-		</tbody>
-	</table>
+
+	<div id="content">
+		<h2>Vehicle Lot</h2>
+
+		<p>
+			<b> {{#full}} Our Car Lot is Full!
+					{{/full}}</font></b>
+		</p>
+
+		<p>
+			<b>{{^full}} Our Car Lot has Open Spaces
+					{{/full}}</font></b>
+		</p>
+
+		<form action="/removeAll" method="post">
+			<input type="hidden" name="carRemove" type="reset">
+			<button>Remove All Cars</button>
+		</form>
+
+		<br> Overall Lot Capacity: {{ capacity }} <br> Open Spots on
+		Lot: {{ opened }} <br> Number of Cars on the Lot: {{ parked }} <br>
+
+		<table id="table">
+			<thead>
+				<tr>
+					<th>License</th>
+					<th>State</th>
+					<th>Make</th>
+					<th>Model</th>
+					<th>Color</th>
+					<th>License</th>
+				</tr>
+			</thead>
+			<br>
+			<tbody>
+				{{#lot.carList}}
+				<tr>
+					<td>{{ license }}</td>
+					<td>{{ state }}</td>
+					<td>{{ make }}</td>
+					<td>{{ model }}</td>
+					<td>{{ color }}</td>
+					<td>{{ location }}</td>
+					<td>
+						<form action="/remove" method="post">
+							<input type="hidden" name="carIndex" value="{{ -index }}">
+							<button>Remove From Lot</button>
+						</form>
+					</td>
+				</tr>
+				{{/lot.carList}}
+			</tbody>
+		</table>
+
+	</div>
+
+	<br>
+	<br>
+
+	<div id="footer">
+		<div id="social-links">
+			<a href="#">Complaint Form</a>
+		</div>
+	</div>
 </body>
 </html>
