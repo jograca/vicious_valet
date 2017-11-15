@@ -25,6 +25,7 @@
 
 	<div id="header-statement">
 		<h2>Welcome to Vicious Valet</h2>
+		<h3>Add A Vehicle to our Lot</h3>
 	</div>
 	
 	<br>
@@ -57,14 +58,15 @@
 	<br>
 
 	<div id="content">
+		<h2>Vehicle Lot</h2>
 
 		<p>
-			<b><font color="red"> {{#full}} The lot is now full!
+			<b> {{#full}} Our Car Lot is Full!
 					{{/full}}</font></b>
 		</p>
 
 		<p>
-			<b><font color="blue"> {{^full}} The lot has spaces
+			<b>{{^full}} Our Car Lot has Open Spaces
 					{{/full}}</font></b>
 		</p>
 
@@ -76,7 +78,7 @@
 		<br> Overall Lot Capacity: {{ capacity }} <br> Open Spots on
 		Lot: {{ opened }} <br> Number of Cars on the Lot: {{ parked }} <br>
 
-		<table border="1" id="table">
+		<table id="table">
 			<thead>
 				<tr>
 					<th>License</th>
@@ -115,8 +117,7 @@
 
 	<div id="footer">
 		<div id="social-links">
-			<a href="http://facebook.com">Facebook</a> <a
-				href="http://twitter.com">Twitter</a>
+			<a href="#">Complaint Form</a>
 		</div>
 	</div>
 </body>

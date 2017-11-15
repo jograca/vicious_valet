@@ -1,12 +1,24 @@
 body {
 	background-color: black;
 	color: white;
-	font-family: Helvetica;
-	font-size: 16px
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
 }
 
 h2 {
 	font-size: 28px;
+}
+
+button {
+	background-color: white;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 #masthead {
@@ -43,7 +55,7 @@ h2 {
 	height: 400px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("http://www.valetsingapore.com/wp-content/uploads/2014/11/Car-Valet-Image-Services-1-600x330.jpg");
+	background-image: url("https://media.licdn.com/media/AAEAAQAAAAAAAAJdAAAAJGQwZjExODdmLWZiNTQtNGJiZS05NzUwLTFjYWNmYWU2MGQ0Mw.png");
 }
 
 #header-statement {
@@ -57,7 +69,7 @@ h2 {
 #content {
 	margin: auto;
     width: 60%;
-    border: 3px solid red;
+    border: 3px solid orange;
     padding: 10px;
 }
 
